@@ -45,7 +45,7 @@ h1 {
   padding: 1rem 0;
 }
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   padding: 1rem 0;
 }
 a{
@@ -107,4 +107,9 @@ img.medium {
 .rating span {
   color: #f0c040;
   margin: 0.1rem;
+}
+.rating span:last-child{
+  color: #292f36;
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
 }
