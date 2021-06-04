@@ -183,6 +183,9 @@ img.large {
 }
 
 /* Alert */
+.loading {
+  display: block !important;
+}
 .success {
   color: #2b9348;
 }
