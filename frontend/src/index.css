@@ -62,7 +62,11 @@ ul {
 li {
   margin-top: 1rem;
 }
+input,
+select,
+textarea,
 button {
+  background-color: #ffffff;
   padding:  1rem;
   border-radius: 0.5rem;
   border: 0.1rem #a4a4a4 solid;
@@ -70,9 +74,14 @@ button {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
+input:hover,
+select:hover,
+textarea:hover,
 button:hover{
   border: 0.1rem #404040 solid;
 }
@@ -117,6 +126,10 @@ a.brand {
 /* Images */
 img {
   border-radius: 0.3rem;
+  max-width: 408px;
+  max-height: 498px;
+  width: auto;
+  height: auto;
 }
 img.medium {
   max-width: 29rem;
