@@ -130,6 +130,9 @@ a.brand {
 .col-2 {
   flex: 2 1 100rem;
 }
+.min-30 {
+  min-width: 30rem;
+}
 
 /* Images */
 img {
@@ -138,6 +141,10 @@ img {
   max-height: 498px;
   width: auto;
   height: auto;
+}
+img.small{
+  max-width: 10rem;
+  width: 100%;
 }
 img.medium {
   max-width: 29rem;
