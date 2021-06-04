@@ -18,7 +18,6 @@ const data = {
   ],
   products: [
     {
-      _id: '1',
       name: 'Kit manutenção / 5 pçs',
       category: 'Ferramentas',
       image: '/images/kit5pcas_manut.jpg',
@@ -30,7 +29,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
       name: 'Substrato Amazonia',
       category: 'Substratos',
       image: '/images/amazonia_substrato3.jpg',
@@ -42,7 +40,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
       name: 'Cilindro CO2 6kg',
       category: 'Cilindros',
       image: '/images/cilindroCo2.jpg',
@@ -54,7 +51,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
       name: 'Difusor Co2',
       category: 'Acessórios',
       image: '/images/difusor2.jpg',
@@ -66,7 +62,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '5',
       name: 'Canister Sunsun HW-403A',
       category: 'Filtros',
       image: '/images/canister.jpg',
@@ -78,7 +73,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '6',
       name: 'Ativador ADA',
       category: 'Substratos',
       image: '/images/ativadorAda.jpg',
