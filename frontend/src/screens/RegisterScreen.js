@@ -45,7 +45,7 @@ export default function RegisterScreen(props) {
           <input 
             type="text" 
             id="name" 
-            placeholder="Digite seu nome" 
+            placeholder="Informe seu nome" 
             required
             onChange={ e => setName(e.target.value)}/>
         </div>
@@ -54,7 +54,7 @@ export default function RegisterScreen(props) {
           <input 
             type="email" 
             id="email" 
-            placeholder="Digite seu email" 
+            placeholder="Informe seu email" 
             required
             onChange={ e => setEmail(e.target.value)}/>
         </div>
