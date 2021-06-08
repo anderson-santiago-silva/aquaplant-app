@@ -11,7 +11,11 @@ import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
-import OrderHistoryScreen from './screens/OrderHsitoryScreen';
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import PrivateRoute from './components/PrivateRoute';
+import ProductListScreen from './screens/ProductListScreen';
+import AdminRoute from './components/AdminRoute';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -44,7 +48,10 @@ function App() {
                   <Link to="#">
                     {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
                   </Link>
-                  <ul className="dropdwon-content">
+                  <ul className="dropdown-content">
+                    <li>
+                      <Link to="/profile">Perfil</Link>
+                    </li>
                     <li>
                       <Link to="/orderhistory">Histórico</Link>
                     </li>
@@ -58,6 +65,27 @@ function App() {
               ) : (
                 <Link to="/signin">Entrar</Link>
               )}
+              {userInfo && userInfo.isAdmin && (
+                <div className="dropdown">
+                  <Link to="#admin">
+                    Admin <i className="fa fa-caret-down"></i>
+                  </Link>
+                  <ul className="dropdown-content">
+                    <li>
+                      <Link to="/dashboard">Dashboard</Link>
+                    </li>
+                    <li>
+                      <Link to="/productlist">Produtos</Link>
+                    </li>
+                    <li>
+                      <Link to="/orderlist">Pedidos</Link>
+                    </li>
+                    <li>
+                      <Link to="/userlist">Usuários</Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
           </div>
         </header>
         <main>
@@ -70,6 +98,14 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <PrivateRoute 
+            path="/profile" 
+            component={ProfileScreen}
+          ></PrivateRoute>
+          <AdminRoute 
+            path="/productlist" 
+            component={ProductListScreen}
+          ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">Todos os direitos reservados</footer>
