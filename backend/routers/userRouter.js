@@ -3,7 +3,7 @@ import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
 import data from '../data.js';
 import User from '../models/userModel.js';
-import { generateToken, isAuth } from '../utils.js';
+import { generateToken, isAdmin, isAuth } from '../utils.js';
 
 const userRouter = express.Router();
 
@@ -89,5 +89,53 @@ userRouter.put(
     }
   })
 );
+
+userRouter.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const users = await User.find({});
+    res.send(users);
+  })
+);
+
+userRouter.delete(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      if (user.isAdmin === true) {
+        res.status(400).send({ message: 'Usuário não pode ser deletado!' })
+      }
+      const deleteUser = await user.remove();
+      res.send({ message: 'Usuário deletado com sucesso!', user: deleteUser })
+    } else {
+      res.status(404).send({ message: 'Usuário não encontrado' })
+    }
+  })
+);
+
+userRouter.put(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      user.name = req.body.name || user.name;
+      user.email = req.body.email || user.email;
+      user.isSeller = req.body.isSeller || user.isSeller;
+      user.isAdmin = req.body.isAdmin || user.isAdmin;
+      const updateUser = await user.save();
+      res.send({ message: 'Usuário atualizado com sucesso', user: updateUser })
+    } else {
+      res.status(404).send({ message: 'Usuário não encontrado!' });
+    }
+  })
+);
+
 
 export default userRouter;

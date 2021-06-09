@@ -18,6 +18,8 @@ import ProductListScreen from './screens/ProductListScreen';
 import AdminRoute from './components/AdminRoute';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
+import UserListScreen from './screens/UserListScreen';
+import UserEditScreen from './screens/UserEditScreen';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -105,18 +107,11 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
-          <PrivateRoute 
-            path="/profile" 
-            component={ProfileScreen}
-          ></PrivateRoute>
-          <AdminRoute 
-            path="/productlist" 
-            component={ProductListScreen}
-          ></AdminRoute>
-          <AdminRoute
-            path="/orderlist"
-            component={OrderListScreen}
-          ></AdminRoute>
+          <PrivateRoute path="/profile"component={ProfileScreen}></PrivateRoute>
+          <AdminRoute path="/productlist"component={ProductListScreen}></AdminRoute>
+          <AdminRoute path="/orderlist" component={OrderListScreen}></AdminRoute>
+          <AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
+          <AdminRoute path="/user/:id/edit" component={UserEditScreen}></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">Todos os direitos reservados</footer>
