@@ -89,14 +89,14 @@ const dispatch = useDispatch();
                     onClick={() => props.history.push(`/product/${product._id}/edit`)
                     }
                   >
-                    Edit
+                    Editar
                   </button>
                   <button
                   type="button"
                   className="small"
                   onClick={() => deleteHandler(product)}
                   >
-                    Delete
+                    Deletar
                   </button>
                 </td>
               </tr>
