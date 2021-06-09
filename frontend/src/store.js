@@ -2,10 +2,30 @@ import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { cartReducer } from './reducers/cartReducers';
 import { 
+  orderCreatedReducer, 
+  orderDeleteReducer, 
+  orderDeliverReducer, 
+  orderDetailsReducer, 
+  orderListReducer, 
+  orderMineListReducer, 
+  orderPayReducer
+} from './reducers/orderReducers';
+import { 
+  productCreateReducer,
+  productDeleteReducer,
   productDetailsReducer, 
-  productListReducer 
+  productListReducer, 
+  productUpdateReducer
 } from './reducers/productReducers';
-import { userSigninReducer } from './reducers/userReducer';
+import { 
+  userDeleteReducer,
+  userDetailsReducer,
+  userListReducer,
+  userRegisterReducer, 
+  userSigninReducer, 
+  userUpdateProfileReducer,
+  userUpdateReducer
+} from './reducers/userReducer';
 
 const initialState = {
   userSignin: {
@@ -17,6 +37,10 @@ const initialState = {
     cartItems: localStorage.getItem('cartItems')
      ? JSON.parse(localStorage.getItem('cartItems')) 
      : [],
+     shippingAddress: localStorage.getItem('shippingAddress')
+     ? JSON.parse(localStorage.getItem('shippingAddress'))
+     : {},
+     paymentMethod: 'Paypal'
   },
 };
 const reducer = combineReducers({
@@ -24,7 +48,23 @@ const reducer = combineReducers({
   productDetails: productDetailsReducer,
   cart: cartReducer,
   userSignin : userSigninReducer,
-})
+  userRegister: userRegisterReducer,
+  orderCreated: orderCreatedReducer,
+  orderDetails: orderDetailsReducer,
+  orderPay: orderPayReducer,
+  orderMineList: orderMineListReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
+  productCreate: productCreateReducer,
+  productUpdate: productUpdateReducer,
+  productDelete: productDeleteReducer,
+  orderList: orderListReducer,
+  orderDelete: orderDeleteReducer,
+  orderDeliver: orderDeliverReducer,
+  userList: userListReducer,
+  userDelete: userDeleteReducer,
+  userUpdate: userUpdateReducer,
+});
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducer, 
