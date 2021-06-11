@@ -49,7 +49,7 @@ function App() {
   }, [dispatch]);
   return (
     <BrowserRouter>
-      <div className="grid-continer">
+      <div className="grid-container">
         <header className="row">
           <div>
             <button
@@ -169,6 +169,7 @@ function App() {
           <Route path="/search/name/:name?" component={SearchScreen} exact></Route>
           <Route path="/search/category/:category" component={SearchScreen} exact></Route>
           <Route path="/search/category/:category/name/:name" component={SearchScreen} exact></Route>
+          <Route path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating" component={SearchScreen} exact></Route>
           <PrivateRoute path="/profile"component={ProfileScreen}></PrivateRoute>
           <AdminRoute path="/productlist"component={ProductListScreen}></AdminRoute>
           <AdminRoute path="/orderlist" component={OrderListScreen}></AdminRoute>

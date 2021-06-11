@@ -14,7 +14,7 @@ body {
   height: 100%;
 }
 /* Layout */
-.grid-continer {
+.grid-container {
   display: grid;
   grid-template-areas: 
     'header'
@@ -130,7 +130,10 @@ a.brand {
   flex: 1 1 25rem;
 }
 .col-2 {
-  flex: 2 1 100rem;
+  flex: 2 1 50rem;
+}
+.col-3 {
+  flex: 32 1 75rem;
 }
 .min-30 {
   min-width: 30rem;
@@ -172,6 +175,7 @@ aside li {
 button.close-sidebar {
   padding: 0.3rem 0.8rem;
 }
+
 /* Images */
 img {
   border-radius: 0.3rem;
@@ -202,7 +206,7 @@ img.large {
 .card-body {
   padding: 1rem;
 }
-.card-body > *{
+.card-body > * {
   margin-bottom: 0.5rem;
 }
 .price {
@@ -279,7 +283,6 @@ img.large {
   margin-top: 0.4rem;
   border-radius: 0.5rem;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -305,11 +308,11 @@ img.large {
 .table tbody tr:nth-of-type(odd) {
   background-color: #f4f4f4;
 }
-.table td, 
-table th {
-text-align: left;
-border: 0.1rem solid #e4e4e4;
-padding: 0.5rem;
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
 }
 .table button {
   margin: 0 0.2rem;
@@ -322,7 +325,10 @@ padding: 0.5rem;
   margin-right: 0.5rem;
 }
 .search input {
-  border-radius: 0.5rem 0.5rem 0;
+  border-radius: 0.5rem 0 0 0.5rem;
   border-right: none;
-  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.active {
+  font-weight: bold;
 }
