@@ -1,7 +1,7 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js';
-import Product from '../models/product Models.js';
+import Product from '../models/productModel.js';
 import { isAdmin, isAuth } from '../utils.js';
 
 const productRouter = express.Router();
@@ -9,15 +9,37 @@ const productRouter = express.Router();
 productRouter.get(
   '/',
   expressAsyncHandler(async (req, res) => {
-    const products = await Product.find({});
+    const name = req.query.name || '';
+    const category = req.query.category || '';
+    const min = req.query.min && Number(req.query.min) !== 0 ? Number(req.query.min) : 0;
+    const max = req.query.max && Number(req.query.max) !== 0 ? Number(req.query.max) : 0;
+    const rating = req.query.rating && Number(req.query.rating) !== 0 ? Number(req.query.rating) : 0;
+    const nameFilter = name ? { name: { $regex: name, $options: 'i' } } : {};
+    const categoryFilter = category ? { category } : {};
+    const priceFilter = min && max ? {price: {$gte: min, $lte: max}} : {};
+    const ratingFilter = rating ? {rating: {$gte: rating}} : {};
+
+    const products = await Product.find({
+      ...nameFilter,
+      ...categoryFilter,
+      ...priceFilter,
+      ...ratingFilter,
+    });
     res.send(products);
+  })
+);
+
+productRouter.get(
+  '/categories',
+  expressAsyncHandler(async (req, res) => {
+    const categories = await Product.find().distinct('category');
+    res.send(categories);
   })
 );
 
 productRouter.get(
   '/seed', 
   expressAsyncHandler(async(req, res) => {
-    // await Product.remove({});
     const createdProducts = await Product.insertMany(data.products);
     res.send({ createdProducts });
   })
@@ -93,5 +115,42 @@ productRouter.delete(
     }
   })
 );
+
+productRouter.post(
+  '/:id/reviews',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const productId = req.params.id;
+    const product = await Product.findById(productId);
+    if (product) {
+      if (product.reviews.find(x => x.name === req.user.name)) {
+       return res
+        .status(400)
+        .send({ message: 'Você já avaliou este produto!'})
+      }
+      const review = {
+        name: req.user.name,
+        rating: Number(req.body.rating),
+        comment: req.body.comment,
+      };
+      product.reviews.push(review);
+      product.numReviews = product.reviews.length;
+      product.rating = 
+        product.reviews.reduce((a, c) => c.rating + a, 0) / 
+        product.reviews.length;
+      const updatedProduct = await product.save();
+      res
+        .status(201)
+        .send({ message: 'Obrigado pela sua avaliação', 
+        review: updatedProduct.reviews[updatedProduct.reviews.length - 1],
+       });
+    } else {
+      res.status(404).send({ message: 'Produto não encontrado!' })
+    }
+  })
+);
+
+
+
 
 export default productRouter;

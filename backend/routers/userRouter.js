@@ -108,7 +108,8 @@ userRouter.delete(
     const user = await User.findById(req.params.id);
     if (user) {
       if (user.isAdmin === true) {
-        res.status(400).send({ message: 'Usuário não pode ser deletado!' })
+        res.status(400).send({ message: 'Usuário "Admin" não pode ser deletado!' })
+        return;
       }
       const deleteUser = await user.remove();
       res.send({ message: 'Usuário deletado com sucesso!', user: deleteUser })
@@ -127,8 +128,7 @@ userRouter.put(
     if (user) {
       user.name = req.body.name || user.name;
       user.email = req.body.email || user.email;
-      user.isSeller = req.body.isSeller || user.isSeller;
-      user.isAdmin = req.body.isAdmin || user.isAdmin;
+      user.isAdmin = req.body.isAdmin || req.body.isAdmin;
       const updateUser = await user.save();
       res.send({ message: 'Usuário atualizado com sucesso', user: updateUser })
     } else {

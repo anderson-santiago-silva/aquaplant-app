@@ -19,8 +19,7 @@ export default function PlaceOrderScreen(props) {
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
   cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
-  cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
-  cart.totalPrice =cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+  cart.totalPrice =cart.itemsPrice + cart.shippingPrice;
   const dispatch = useDispatch();
   const placeOrderHandler = () => {
     dispatch(createdOrder({ ...cart, orderItems: cart.cartItems }));
@@ -73,7 +72,7 @@ export default function PlaceOrderScreen(props) {
                       <Link to={`/product/${item.product}`}>{item.name}</Link>
                     </div>
                     <div>
-                      {item.qty} x R$ {item.price} = R$ {item.qty * item.price}
+                      {item.qty} x R$ {item.price.toLocaleString('pt-br', {minimumFractionDigits: 2})} = R$ {item.qty * item.price}
                     </div>
                   </li>
                 ))}
@@ -91,19 +90,13 @@ export default function PlaceOrderScreen(props) {
               <li>
                 <div className="row">
                   <div>Itens</div>
-                  <div>R$ {cart.itemsPrice.toFixed(2)}</div>
+                  <div>R$ {cart.itemsPrice.toLocaleString('pt-br', {minimumFractionDigits: 2})}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                 <div>Entrega</div>
-                  <div>R$ {cart.shippingPrice.toFixed(2)}</div>
-                </div>
-              </li>
-              <li>
-                <div className="row">
-                <div>Tax</div>
-                  <div>R$ {cart.taxPrice.toFixed(2)}</div>
+                  <div>R$ {cart.shippingPrice.toLocaleString('pt-br', {minimumFractionDigits: 2})}</div>
                 </div>
               </li>
               <li>
@@ -112,7 +105,7 @@ export default function PlaceOrderScreen(props) {
                     <strong>Total pedido</strong>
                   </div>
                   <div>
-                    <strong>R$ {cart.totalPrice.toFixed(2)}</strong>
+                    <strong>R$ {cart.totalPrice.toLocaleString('pt-br', {minimumFractionDigits: 2})}</strong>
                   </div>
                 </div>
               </li>
