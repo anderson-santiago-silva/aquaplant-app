@@ -18,7 +18,7 @@ export default function CartScreen(props) {
     }
   }, [dispatch, productId, qty]);
   const removeFromCartHandler = (id) => {
-    // delete action
+    
     dispatch(removeFromCart(id));
   };
 
@@ -31,7 +31,7 @@ export default function CartScreen(props) {
         <h1>Carrinho de compras</h1>
           {cartItems.length === 0 ? (
           <MessageBox>
-            O carrinho está vazio. <Link to="/">Ir para compras</Link>
+            O seu carrinho está vazio. <Link to="/">Ir para compras</Link>
           </MessageBox>
           ) : (
             <ul>
@@ -63,7 +63,7 @@ export default function CartScreen(props) {
                         ))}
                       </select>
                     </div>
-                    <div>R$ {item.price}</div>
+                    <div>R$ {item.price.toLocaleString('pt-br', {minimumFractionDigits: 2})}</div>
                     <div>
                       <button 
                         type="button" 

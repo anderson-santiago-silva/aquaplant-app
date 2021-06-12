@@ -50,7 +50,7 @@ export default function DashboardScreen() {
               <div className="summary-body">
                 R$
                 {summary.orders[0]
-                  ? summary.orders[0].totalSales.toFixed(2)
+                  ? summary.orders[0].totalSales.toLocaleString('pt-br', {minimumFractionDigits: 2})
                   : 0}
               </div>
             </li>
@@ -67,7 +67,7 @@ export default function DashboardScreen() {
                     chartType="AreaChart"
                     loader={<div>Carregando gráfico</div>}
                     data={[
-                      ['Date', 'Sales'],
+                      ['Date', 'Vendas'],
                       ...summary.dailyOrders.map((x) => [x._id, x.sales]),
                     ]}
                   ></Chart>

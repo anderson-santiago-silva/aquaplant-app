@@ -90,7 +90,7 @@ function App() {
                       <Link to="/orderhistory">Histórico</Link>
                     </li>
                     <li>
-                      <Link to="#signout" onClick={signoutHandler}>
+                      <Link to="/signin" onClick={signoutHandler}>
                         Sair
                       </Link>
                     </li>
@@ -153,7 +153,7 @@ function App() {
           </ul>
         </aside>
         <main>
-          <Route path="/cart/:id" component={CartScreen}></Route> 
+          <Route path="/cart/:id?" component={CartScreen}></Route> 
           <Route path="/product/:id" component={ProductScreen} exact></Route>
           <Route 
             path="/product/:id/edit" 

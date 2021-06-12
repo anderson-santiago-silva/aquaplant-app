@@ -149,19 +149,13 @@ export default function OrderScreen(props) {
               <li>
                 <div className="row">
                   <div>Itens</div>
-                  <div>R$ {order.itemsPrice.toFixed(2)}</div>
+                  <div>R$ {order.itemsPrice.toLocaleString('pt-br', {minimumFractionDigits: 2})}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                 <div>Entrega</div>
-                  <div>R$ {order.shippingPrice.toFixed(2)}</div>
-                </div>
-              </li>
-              <li>
-                <div className="row">
-                <div>Tax</div>
-                  <div>R$ {order.taxPrice.toFixed(2)}</div>
+                  <div>R$ {order.shippingPrice.toLocaleString('pt-br', {minimumFractionDigits: 2})}</div>
                 </div>
               </li>
               <li>
@@ -170,7 +164,7 @@ export default function OrderScreen(props) {
                     <strong>Total pedido</strong>
                   </div>
                   <div>
-                    <strong>R$ {order.totalPrice.toFixed(2)}</strong>
+                    <strong>R$ {order.totalPrice.toLocaleString('pt-br', {minimumFractionDigits: 2})}</strong>
                   </div>
                 </div>
               </li>

@@ -32,7 +32,6 @@ export default function ProfileScreen() {
     }
   }, [dispatch, userInfo._id, user]);
   const submitHandler = (e) => {
-    // TODO: dispatch
     if (password !== confirmPassword) {
       alert('As senhas não correspondem')
     } else {

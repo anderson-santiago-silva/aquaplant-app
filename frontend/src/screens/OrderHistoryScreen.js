@@ -14,10 +14,11 @@ export default function OrderHistoryScreen(props) {
   return (
     <div>
       <h1>Histórico de pedidos</h1>
-      {loading? <LoadingBox></LoadingBox>:
-      error? <MessageBox variant="danger"></MessageBox>
-      :
-      (
+      {loading ? ( 
+        <LoadingBox></LoadingBox> 
+      ) : error ? ( 
+        <MessageBox variant="danger">{error}</MessageBox>
+      ) : (
         <table className="table">
           <thead>
             <tr>
@@ -26,7 +27,7 @@ export default function OrderHistoryScreen(props) {
               <th>TOTAL</th>
               <th>PAGAMENTO</th>
               <th>ENTREGUE</th>
-              <th>DETALHE</th>
+              <th>AÇÃO</th>
             </tr>
           </thead>
           <tbody>
@@ -34,7 +35,7 @@ export default function OrderHistoryScreen(props) {
               <tr key={order._id}>
                 <td>{order._id}</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
-                <td>R$ {order.totalPrice.toFixed(2)}</td>
+                <td>R$ {order.totalPrice.toLocaleString('pt-br', {minimumFractionDigits: 2})}</td>
                 <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'Não'}</td>
                 <td>
                   {order.isDelivered 

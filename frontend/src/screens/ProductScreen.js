@@ -11,7 +11,7 @@ export default function ProductScreen(props) {
   const dispatch = useDispatch();
   const productId = props.match.params.id;
   const [qty, setQty] = useState(1);
-  const productDetails = useSelector((state) => state.productDetails); // Esta linha já mudou tudo 
+  const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
   const userSignin = useSelector((state) => state.userSignin); 
   const { userInfo } = userSignin;
@@ -72,7 +72,7 @@ export default function ProductScreen(props) {
                 ></Rating>
               </li>
               <li>
-                Valor : R$ {product.price}
+                Valor : R$ {product.price.toLocaleString('pt-br', {minimumFractionDigits: 2})}
               </li>
               <li>Descrição:
                 <p>{product.description}</p>
@@ -85,7 +85,7 @@ export default function ProductScreen(props) {
                 <li>
                   <div className="row">
                     <div>Valor</div>
-                    <div className="price">R$ {product.price}</div>
+                    <div className="price">R$ {product.price.toLocaleString('pt-br', {minimumFractionDigits: 2})}</div>
                   </div>
                 </li>
                 <li>

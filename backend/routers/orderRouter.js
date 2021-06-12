@@ -47,7 +47,7 @@ orderRouter.get(
     const dailyOrders = await Order.aggregate([
       {
         $group: {
-          _id: { $dateToString: {format: '%Y-%m-%d', date: '$createdAt'} },
+          _id: { $dateToString: {format: '%d/%m%Y', date: '$createdAt'} },
           orders: { $sum: 1},
           sales: { $sum: '$totalPrice'},
         },
@@ -80,7 +80,7 @@ orderRouter.post(
   isAuth,
   expressAsyncHandler(async (req, res) => {
     if (req.body.orderItems.length === 0) {
-      res.status(400).send({ message: 'O carrinho está vazio' })
+      res.status(400).send({ message: 'O seu carrinho está vazio' })
     } else {
       const order = new Order({
         orderItems: req.body.orderItems,
@@ -88,7 +88,6 @@ orderRouter.post(
         paymentMethod: req.body.paymentMethod,
         itemsPrice: req.body.itemsPrice,
         shippingPrice: req.body.shippingPrice,
-        taxPrice: req.body.taxPrice,
         totalPrice: req.body.totalPrice,
         user: req.user._id,
       });
