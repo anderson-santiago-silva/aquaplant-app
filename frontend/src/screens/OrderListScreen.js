@@ -53,12 +53,12 @@ export default function OrderListScreen(props) {
                   <td>{order._id}</td>
                   <td>{order.name}</td>
                   <td>{order.createdAt.substring(0, 10)}</td>
-                  <td>R$ {order.totalPrice.toFixed(2)}</td>
-                  <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'Não'}</td>
+                  <td>{order.totalPrice.toFixed(2)}</td>
+                  <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'No'}</td>
                   <td>
                     {order.isDelivered 
                       ? order.deliveredAt.substring(0, 10) 
-                      : 'Não'}
+                      : 'No'}
                   </td>
                   <td>
                     <button
