@@ -75,8 +75,24 @@ a.brand {
 img {
   border-radius: 0.3rem;
 }
+img.small{
+  max-width: 10rem;
+  width: 100%;
+}
 img.medium {
-  max-width: 29rem;
+  max-width: 25rem;
+  width: 100%;
+  margin: 13px;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+img.medium:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+img.large {
   width: 100%;
 }
 
@@ -87,6 +103,7 @@ img.medium {
   background-color: #f8f8f8;
   border-radius: 0.3rem;
   margin: 1rem;
+  border: 2px red solid;
 }
 .card-body {
   padding: 1rem;

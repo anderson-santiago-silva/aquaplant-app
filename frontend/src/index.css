@@ -183,14 +183,23 @@ img {
   max-height: 498px;
   width: auto;
   height: auto;
+  margin: 13px;
 }
 img.small{
   max-width: 10rem;
   width: 100%;
 }
 img.medium {
-  max-width: 29rem;
+  max-width: 25rem;
   width: 100%;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+img.medium:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 img.large {
   width: 100%;
@@ -199,7 +208,7 @@ img.large {
 /* Card */
 .card {
   border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   border-radius: 0.3rem;
   margin: 1rem;
 }
