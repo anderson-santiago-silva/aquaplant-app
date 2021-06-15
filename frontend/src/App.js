@@ -125,7 +125,7 @@ function App() {
         <aside className={sidebarIsOpen? 'open' : ''}>
           <ul className="categories">
             <li>
-              <strong>Categorias</strong>
+              <strong>DEPARTAMENTO</strong>
               <button 
                 onClick={() => setSidebarIsOpen(false)} 
                 className="close-sidebar" 
@@ -145,7 +145,9 @@ function App() {
                   to={`/search/category/${c}`}
                   onClick={() => setSidebarIsOpen(false)}
                 >
-                  {c}
+                  <span>
+                    {c +' >'} 
+                  </span>
                 </Link>
               </li>
             ))
@@ -153,6 +155,7 @@ function App() {
           </ul>
         </aside>
         <main>
+          <h1>P R O D U T O S</h1>
           <Route path="/cart/:id?" component={CartScreen}></Route> 
           <Route path="/product/:id" component={ProductScreen} exact></Route>
           <Route 

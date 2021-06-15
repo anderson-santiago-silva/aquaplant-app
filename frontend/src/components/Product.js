@@ -14,8 +14,10 @@ export default function Product (props) {
         />
       </Link>
       <div className="card-body">
-        <Link href={`/product/${product._id}`}>
-          <h2>{product.name}</h2>
+        <Link to={`/product/${product._id}`}>
+          <span>
+            <h2>{product.name}</h2>
+          </span>
         </Link>
           <Rating 
             rating={product.rating} 

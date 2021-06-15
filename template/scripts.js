@@ -1,8 +1,0 @@
-$(function(){
-
-  $(".row-center").slick({
-
-
-  });
-
-})
