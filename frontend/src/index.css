@@ -17,12 +17,13 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas: 
-    'header'
-    'main'
-    'footer';
+  'header'
+  'main'
+  'footer';
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 50px;
   height: 100%;
+  width: 100%;
 }
 header { 
   grid-area: header;
@@ -31,7 +32,8 @@ header {
 }
 main {
   grid-area: main;
-  padding: 10px;
+  width: 100%;
+  padding: 5px;
 }
 footer {
   grid-area: footer;
@@ -195,26 +197,42 @@ img.small{
 }
 img.medium {
   max-width: 250px;
-  width: 100%;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  height: 250px;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 img.medium:hover {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 img.large {
   width: 100%;
 }
 
 /* Card */
-.card {
-  border: 1px #c0c0c0 solid;
+.card-box {
+  margin: 20px;
+  width: 270px;
+  height: 444px;
+  position: relative;
   background-color: #ffffff;
   border-radius: 3px;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(187,187,187,1.00);
+}
+.card-box:hover {
+  box-shadow: 2px 2px 12px rgba(47,47,47,0.40);
+  transition: all ease 0.1s;
+}
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  margin: 1rem;
 }
 .card-body {
   padding: 10px;
@@ -222,7 +240,10 @@ img.large {
 .card-body > * {
   margin-bottom: 5px;
 }
-.price {
+.price-box {
+  color: #ffffff;
+  background-color: #13324b;
+  line-height: 40px;
   font-size: 25px;
   font-weight: bold;
 }
@@ -373,3 +394,7 @@ img.large {
 .summary-title.color3 {
   background-color: #e0e0f0;
 }
+
+/*  Swiper  */
+
+
