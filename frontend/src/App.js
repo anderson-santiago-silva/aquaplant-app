@@ -155,7 +155,6 @@ function App() {
           </ul>
         </aside>
         <main>
-          <h1>P R O D U T O S</h1>
           <Route path="/cart/:id?" component={CartScreen}></Route> 
           <Route path="/product/:id" component={ProductScreen} exact></Route>
           <Route 
@@ -182,8 +181,8 @@ function App() {
           <AdminRoute path="/dashboard" component={DashboardScreen}></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center">Todos os direitos reservados</footer>
       </div>
+        <footer className="row center">Todos os direitos reservados</footer>
     </BrowserRouter>
   );
 }

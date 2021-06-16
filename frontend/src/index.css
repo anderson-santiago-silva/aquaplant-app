@@ -182,7 +182,16 @@ button.close-sidebar {
   padding: 3px 8px;
 }
 
-/* Images */
+
+
+
+
+
+
+
+
+
+
 img {
   border-radius: 3px;
   max-width: 408px;
@@ -211,11 +220,11 @@ img.large {
   width: 100%;
 }
 
-/* Card */
+
 .card-box {
   margin: 20px;
-  width: 270px;
-  height: 444px;
+  width: 297px;
+  height: 488px;
   position: relative;
   background-color: #ffffff;
   border-radius: 3px;
@@ -229,10 +238,10 @@ img.large {
   transition: all ease 0.1s;
 }
 .card {
-  border: 0.1rem #c0c0c0 solid;
+  border: 1px #c0c0c0 solid;
   background-color: #ffffff;
-  border-radius: 0.3rem;
-  margin: 1rem;
+  border-radius: 3px;
+  margin: 10px;
 }
 .card-body {
   padding: 10px;
@@ -248,7 +257,6 @@ img.large {
   font-weight: bold;
 }
 
-/* Rating */
 .rating span {
   color: #f0c040;
   margin: 1px;
@@ -258,6 +266,12 @@ img.large {
   margin-left: 5px;
   font-size: 18px;
 }
+
+
+
+
+
+
 
 /* Alert */
 .loading {
@@ -396,5 +410,17 @@ img.large {
 }
 
 /*  Swiper  */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #dfdbe5;
+}
+
+.swiper-container {
+  max-width: 1500px;
+}
 
 
