@@ -181,8 +181,8 @@ function App() {
           <AdminRoute path="/dashboard" component={DashboardScreen}></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-      </div>
         <footer className="row center">Todos os direitos reservados</footer>
+      </div>
     </BrowserRouter>
   );
 }

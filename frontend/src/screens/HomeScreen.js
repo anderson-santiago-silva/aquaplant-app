@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Product from '../components/Product';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
+import HeaderVideo from '../components/HeaderVideo';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -27,32 +28,34 @@ export default function HomeScreen() {
   }, [dispatch]);
   return (
     <div>
-      <h1>P R O D U T O S</h1>
+      <HeaderVideo />
+      <span>
+        <h1>P R O D U T O S</h1>
+      </span>
       <div className="row center">
       {loading ? (
         <LoadingBox></LoadingBox>
         ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-          ) : (
-            <div className="row center">
-              <Swiper  
-                slidesPerView={4.5} 
-                spaceBetween={1} 
-                slidesPerGroup={2} 
-                loop={true} 
-                loopFillGroupWithBlank={true} 
-                pagination={{"clickable": true}} 
-                navigation={true} 
-                className="mySwiper">
+        <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+          <div className="row center">
+            <Swiper  
+              slidesPerView={4.5} 
+              spaceBetween={1} 
+              slidesPerGroup={2} 
+              loop={true} 
+              loopFillGroupWithBlank={true} 
+              navigation={true} 
+              className="mySwiper">
 
-                  {products.map((product) => (
-                    <SwiperSlide>
-                      <Product key={product._id} product={product}></Product>
-                    </SwiperSlide>
-                    ))}
-              </Swiper>
-            </div>
-      )}
+                {products.map((product) => (
+                  <SwiperSlide>
+                    <Product key={product._id} product={product}></Product>
+                  </SwiperSlide>
+                  ))}
+            </Swiper>
+          </div>
+        )}
       </div>
     </div>
   );

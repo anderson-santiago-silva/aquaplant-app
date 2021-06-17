@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Sans+JP:wght@300&display=swap');
+
 html {
   font-size: 10px; /* 16px x 62.5 = 10px = 1rem */
   box-sizing: border-box;
 }
+header { 
+  grid-area: header;
+  background-color: #13324b;
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   height: 100vh;
   font-size: 16px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,17 +31,11 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 50px;
   height: 100%;
-  width: 100%;
-}
-header { 
-  grid-area: header;
-  background-color: #13324b;
-  font-weight: bold;
 }
 main {
   grid-area: main;
   width: 100%;
-  padding: 5px;
+  object-fit: cover;
 }
 footer {
   grid-area: footer;
@@ -73,10 +75,10 @@ textarea,
 button {
   background-color: #ffffff;
   padding:  10px;
-  border-radius: 5px;
+  border-radius: px;
   border: 1px #a4a4a4 solid;
   font-size: 16px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -104,7 +106,7 @@ button.block {
 /* Header */
 header a {
   color: #99ADB7;
-  padding: 20px;
+  padding: 10px;
 }
 a.brand {
   color: #ffffff;
@@ -115,9 +117,9 @@ a.brand {
   background-color: #f02020;
   color: #ffffff;
   border-radius: 50%;
-  padding: 2px 7px;
+  padding: 0 7px;
   font-size: 14px;
-  margin-left: 2px;
+  margin-left: 5px;
 }
 .row {
   display: flex;
@@ -160,11 +162,12 @@ aside.open {
 }
 button.open-sidebar {
   font-size: 30px;
-  padding: 2px 5px;
+  padding: 0 5px;
   margin: 0 5px;
   background: none;
   color: #ffffff;
   cursor: pointer;
+  border-radius: 5px;
 }
 button.open-sidebar:hover {
   border-color: #ffffff;
@@ -190,7 +193,10 @@ button.close-sidebar {
 
 
 
-
+span > h1 {
+  margin-left: 100px;
+  font-size: 25px;
+}
 
 img {
   border-radius: 3px;
@@ -222,7 +228,6 @@ img.large {
 
 
 .card-box {
-  margin: 20px;
   width: 297px;
   height: 488px;
   position: relative;
@@ -377,7 +382,7 @@ img.large {
 .search input {
   border-radius: 5px 0 0 5px;
   border-right: none;
-  margin-left: 5px;
+  align-items: center;
 }
 .active {
   font-weight: bold;
@@ -420,7 +425,44 @@ img.large {
 }
 
 .swiper-container {
-  max-width: 1500px;
+  max-width: 180vh;
+  margin-bottom: 30px;
 }
 
+/*  Video  */
 
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.hero-container p {
+  text-align: center;
+  margin: 35px;
+  font-size: 30px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.hero-container h1 {
+  font-size: 32px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.h-line {
+  width: 95%;
+  border: 1px solid rgb(226, 224, 224);
+  box-shadow: 2px 2px 5px rgba(47,47,47,0.40);
+}
