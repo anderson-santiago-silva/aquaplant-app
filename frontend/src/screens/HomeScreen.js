@@ -5,6 +5,7 @@ import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import HeaderVideo from '../components/HeaderVideo';
+import Banner from '../components/Banner';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -56,6 +57,7 @@ export default function HomeScreen() {
             </Swiper>
           </div>
         )}
+      <Banner />
       </div>
     </div>
   );

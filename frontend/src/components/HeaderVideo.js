@@ -1,12 +1,14 @@
 import React from 'react';
 
 function HeaderVideo() {
-  // let video = document.querySelector('video');
-  //   window.addEventListener('scroll', function() {
-  //     let value = 1 + window.scrollY/-500;
-  //     video.style.opacity = value;
-  //     console.log(value);
-  //   });
+  React.useEffect(() => {
+    let video = document.querySelector('video');
+      window.addEventListener('scroll', function() {
+        let value = 1 + window.scrollY/-700;
+        video.style.opacity = value;
+      });
+  }, [])
+
   
   return (
     <div className='hero-container'>

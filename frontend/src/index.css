@@ -59,7 +59,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #ffffff;
+  color: rgb(235, 233, 233);
 }
 ul {
   padding: 0;
@@ -75,7 +75,7 @@ textarea,
 button {
   background-color: #ffffff;
   padding:  10px;
-  border-radius: px;
+  border-radius: 3px;
   border: 1px #a4a4a4 solid;
   font-size: 16px;
   font-family: 'Noto Sans JP', sans-serif;
@@ -95,6 +95,7 @@ button:hover{
 
 button.primary {
   background-color: #f0c040;
+  font-weight: bold;
 }
 button.block {
   width: 100%;
@@ -133,6 +134,11 @@ a.brand {
 }
 .row.top {
   align-items: flex-start;
+  margin-left: 20px;
+}
+.caract {
+  align-items: flex-start;
+  margin-left: 20px;
 }
 .col-1 {
   flex: 1 1 250px;
@@ -465,4 +471,17 @@ video {
   width: 95%;
   border: 1px solid rgb(226, 224, 224);
   box-shadow: 2px 2px 5px rgba(47,47,47,0.40);
+}
+
+
+/*  Banner */
+
+#slider {
+  box-shadow: 2px 2px 5px rgba(47,47,47,0.40);
+  border: 1px solid rgb(226, 224, 224);
+  width: 180vh;
+  height: 20vh;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
 }

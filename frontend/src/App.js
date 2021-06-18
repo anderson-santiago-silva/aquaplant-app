@@ -61,7 +61,8 @@ function App() {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
-              aquaplant
+              aquaplant <i className="fab fa-typo3" />
+              <img src="" alt="" />
             </Link>
           </div>
           <div>

@@ -93,7 +93,7 @@ export default function CartScreen(props) {
                 className="primary block" 
                 disabled={cartItems.length === 0}
               >
-                Confirmar o pedido
+                Confirmar pedido
               </button>
             </li>
           </ul>
