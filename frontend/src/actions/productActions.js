@@ -29,7 +29,7 @@ export const listProducts = ({
   min = 0,
   max = 0,
   rating = 0,
-}) => async (dispatch) => { //As chaves do "{name=''}" conflita com a página inicial
+}) => async (dispatch) => { //As chaves do "{name=''}" conflita com a página de produtos
   dispatch({
     type: PRODUCT_LIST_REQUEST
   });

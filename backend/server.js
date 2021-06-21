@@ -7,13 +7,14 @@ import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 
+
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/aquaplant', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/aquaplant', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -35,8 +36,6 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message })
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Server at http://localhost:${port}`);
-});
+app.listen(process.env.PORT, () => 
+  console.log(`Server at http://localhost:${process.env.PORT}`));
 

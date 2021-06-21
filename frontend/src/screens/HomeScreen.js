@@ -4,6 +4,20 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
+import HeaderVideo from '../components/HeaderVideo';
+import Banner from '../components/Banner';
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+
+
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css"
+import "swiper/components/navigation/navigation.min.css"
+
+SwiperCore.use([Pagination,Navigation]);
+
 
 export default function HomeScreen() {
   const dispatch = useDispatch();
@@ -15,17 +29,36 @@ export default function HomeScreen() {
   }, [dispatch]);
   return (
     <div>
+      <HeaderVideo />
+      <span>
+        <h1>P R O D U T O S</h1>
+      </span>
+      <div className="row center">
       {loading ? (
         <LoadingBox></LoadingBox>
-      ) : error ? (
+        ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
-      ) : (
-      <div className="row center">
-        {products.map((product) => (
-          <Product key={product._id} product={product}></Product>
-        ))}
+        ) : (
+          <div className="row center">
+            <Swiper  
+              slidesPerView={4.5} 
+              spaceBetween={1} 
+              slidesPerGroup={2} 
+              loop={true} 
+              loopFillGroupWithBlank={true} 
+              navigation={true} 
+              className="mySwiper">
+
+                {products.map((product) => (
+                  <SwiperSlide>
+                    <Product key={product._id} product={product}></Product>
+                  </SwiperSlide>
+                  ))}
+            </Swiper>
+          </div>
+        )}
+      <Banner />
       </div>
-      )}
     </div>
   );
 }

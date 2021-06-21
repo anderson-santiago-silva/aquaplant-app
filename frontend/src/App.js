@@ -61,7 +61,8 @@ function App() {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
-              aquaplant
+              aquaplant <i className="fab fa-typo3" />
+              <img src="" alt="" />
             </Link>
           </div>
           <div>
@@ -125,7 +126,7 @@ function App() {
         <aside className={sidebarIsOpen? 'open' : ''}>
           <ul className="categories">
             <li>
-              <strong>Categorias</strong>
+              <strong>DEPARTAMENTO</strong>
               <button 
                 onClick={() => setSidebarIsOpen(false)} 
                 className="close-sidebar" 
@@ -145,7 +146,9 @@ function App() {
                   to={`/search/category/${c}`}
                   onClick={() => setSidebarIsOpen(false)}
                 >
-                  {c}
+                  <span>
+                    {c +' >'} 
+                  </span>
                 </Link>
               </li>
             ))
