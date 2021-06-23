@@ -5,14 +5,14 @@
 - 🔖 [Sobre](#-sobre)
 - 🚀 [Demo Website](#-demo-website)
 - 🧰 [Stacks e Recursos](#-stacks-e-recursos)
-- 📦 [Para rodar local](#-para-rodar-local)
+- 📦 [Para rodar local](#-rodar-local)
 
 
-## 🔖Sobre
+## 🔖 Sobre
 ### 🐠 Um e-commerce de aquarismo para quem curte a arte do aquascaping.
 Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar representações naturais da própria natureza em aquários. Existem diversas técnicas mas basicamente podem ser utilizadas plantas aquáticas, peixes, crustáceos entre outras coisas.
 
-## 🚀Demo Website
+## 🚀 Demo Website
 
  - 👉 Heroku : [https://aquaplant-app.herokuapp.com/](https://aquaplant-app.herokuapp.com/)
 
@@ -28,7 +28,7 @@ Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar represe
 - Deployment: Heroku
 - Watch React & Node Tutorial
 
-## 📦 Para rodar local
+## 📦 Rodar local
 
 ### 1. Clone o repositório
 
