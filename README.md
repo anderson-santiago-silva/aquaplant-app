@@ -1,13 +1,13 @@
-# Aquaplant ECommerce Website
+# Aquaplant Ecommerce Website
 ![aquaplant](/template/images/amazona.jpg)
 
 
-# Um ecommerce de aquarismo para quem curte a arte do aquascaping.
+# 🔖Um e-commerce de aquarismo para quem curte a arte do aquascaping.
 Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar representações naturais da própria natureza em aquários. Existem diversas técnicas mas basicamente podem ser utilizadas plantas aquáticas, peixes, crustáceos entre outras coisas.
 
 ## Demo Website
 
-- 👉 Heroku : [https://aquaplant-app.herokuapp.com/](https://aquaplant-app.herokuapp.com/)
+## 🚀 Heroku : [https://aquaplant-app.herokuapp.com/](https://aquaplant-app.herokuapp.com/)
 
 
 ## 🧰 Stacks e Recursos
@@ -21,7 +21,7 @@ Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar represe
 - Deployment: Heroku
 - Watch React & Node Tutorial
 
-## Run Locally
+## 📦 Para rodar local
 
 ### 1. Clone repo
 
@@ -57,19 +57,14 @@ $ npm install
 $ npm start
 ```
 
-### 5. Seed Users and Products
+### 5. Usuários e Produtos
 
-- Run this on chrome: http://localhost:5000/api/users/seed
-- It returns admin email and password
-- Run this on chrome: http://localhost:5000/api/products/seed
-- It creates 6 sample products
+- Execute isto no chrome: http://localhost:5000/api/users/seed
+- Isto retornará o email e a senha de administrador
+- Execute isto no chrome: http://localhost:5000/api/products/seed
+- Isto criará 10 produtos
 
 ### 6. Admin Login
 
-- Run http://localhost:3000/signin
-- Enter admin email and password and click signin
-
-## Support
-
-- Q/A: https://webacademy.pro/amazona
-- Contact Instructor: [Basir](mailto:basir.jafarzadeh@gmail.com)
+- Execute http://localhost:3000/signin
+- Entre com o email admin e senha e clique signin
