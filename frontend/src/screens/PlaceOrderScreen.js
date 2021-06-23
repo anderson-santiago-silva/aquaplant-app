@@ -14,7 +14,7 @@ export default function PlaceOrderScreen(props) {
   }
   const orderCreated = useSelector((state) => state.orderCreated);
   const { loading, success, error, order } = orderCreated;
-  const toPrice = (num) => Number(num.toFixed(2)); // 5.123 => "5.12" => 5.12
+  const toPrice = (num) => Number(num.toFixed(2));
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
@@ -115,7 +115,7 @@ export default function PlaceOrderScreen(props) {
                   onClick={placeOrderHandler}
                   className="primary block"
                   disabled={cart.cartItems.length === 0}
-                >
+                  >
                   Finalizar pedido
                 </button>
               </li>

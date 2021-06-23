@@ -83,7 +83,7 @@ export default function CartScreen(props) {
             <li>
               <h2>
                 Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} itens)
-                 : R$ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+                 : R$ {cartItems.reduce((a, c) => a + c.price * c.qty, 0).toLocaleString('pt-br', {minimumFractionDigits: 2})}
               </h2>
             </li>
             <li>
