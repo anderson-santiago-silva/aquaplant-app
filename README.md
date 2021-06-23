@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Aquaplant ECommerce Website
+![aquaplant](/template/images/amazona.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Um ecommerce de aquarismo para quem curte a arte do aquascaping.
+Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar representações naturais da própria natureza em aquários. Existem diversas técnicas mas basicamente podem ser utilizadas plantas aquáticas, peixes, crustáceos entre outras coisas.
 
-In the project directory, you can run:
+## Demo Website
 
-### `npm start`
+- 👉 Heroku : [https://aquaplant-app.herokuapp.com/](https://aquaplant-app.herokuapp.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🧰 Stacks e Recursos
 
-### `npm test`
+- MERN (MongoDB, ExpressJS, ReactJS e NodeJS)
+- React: Components, Props, Events, Hooks, Router, Axios
+- Redux: Store, Reducers, Actions
+- Node & Express: Web API, Body Parser, File Upload, JWT
+- MongoDB: Mongoose, Aggregation
+- Development: ESLint, Babel, Git, Github,
+- Deployment: Heroku
+- Watch React & Node Tutorial
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run Locally
 
-### `npm run build`
+### 1. Clone repo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ git clone git@github.com:basir/amazona.git
+$ cd amazona
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Setup MongoDB
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Local MongoDB
+  - Install it from [here](https://www.mongodb.com/try/download/community)
+  - Create .env file in root folder
+  - Set MONGODB_URL=mongodb://localhost/amazona  
+- Atlas Cloud MongoDB
+  - Create database at [https://cloud.mongodb.com](https://cloud.mongodb.com)
+  - Create .env file in root folder
+  - Set MONGODB_URL=mongodb+srv://your-db-connection
 
-### `npm run eject`
+### 3. Run Backend
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+$ npm install
+$ npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Run Frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+# open new terminal
+$ cd frontend
+$ npm install
+$ npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 5. Seed Users and Products
 
-## Learn More
+- Run this on chrome: http://localhost:5000/api/users/seed
+- It returns admin email and password
+- Run this on chrome: http://localhost:5000/api/products/seed
+- It creates 6 sample products
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 6. Admin Login
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run http://localhost:3000/signin
+- Enter admin email and password and click signin
 
-### Code Splitting
+## Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Q/A: https://webacademy.pro/amazona
+- Contact Instructor: [Basir](mailto:basir.jafarzadeh@gmail.com)
