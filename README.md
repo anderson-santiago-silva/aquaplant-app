@@ -3,8 +3,8 @@
 
 ## Índice
 - 🔖 [Sobre](#-Sobre)
-- 🧰 [Recursos](#-recursos)
-- 📝 [Linguagens](#-linguagens)
+- 🚀 [Demo Website](#-Demo-Website)
+- 🧰 [Stacks e Recursos](#-Stacks-e-Recursos)
 - 📦 [Para rodar local](#-para-rodar-local)
 
 
