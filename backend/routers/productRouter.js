@@ -150,7 +150,4 @@ productRouter.post(
   })
 );
 
-
-
-
 export default productRouter;

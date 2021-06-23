@@ -24,7 +24,6 @@ export default function ShippingAddressScreen(props) {
       saveShippingAddress({ fullName, address, state, city, postalCode, country })
     );
     props.history.push('/payment');
-    //TODO: dispatch save shipping address action
   }
   return (
     <div>
@@ -89,7 +88,7 @@ export default function ShippingAddressScreen(props) {
           />
         </div>
         <div>
-          <label htmlFor="country">Pais</label>
+          <label htmlFor="country">País</label>
           <input 
             type="text"
             id="country"

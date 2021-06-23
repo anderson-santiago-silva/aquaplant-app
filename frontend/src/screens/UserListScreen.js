@@ -34,7 +34,7 @@ export default function UserListScreen(props) {
       {loadingDelete && <LoadingBox></LoadingBox>}
       {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
       {successDelete && (
-        <MessageBox variant="success">Usuário deletado com sucesso.</MessageBox>
+        <MessageBox variant="success">Usuário deletado com sucesso!</MessageBox>
       )}
       {loading ? (
         <LoadingBox></LoadingBox>

@@ -36,7 +36,7 @@ export default function SigninScreen(props) {
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
-          <label htmlFor="email">Seu email</label>
+          <label htmlFor="email">Email</label>
           <input 
             type="email" 
             id="email" 
@@ -45,7 +45,7 @@ export default function SigninScreen(props) {
             onChange={ e => setEmail(e.target.value)}/>
         </div>
         <div>
-          <label htmlFor="password">Sua senha</label>
+          <label htmlFor="password">Senha</label>
           <input 
             type="password" 
             id="password" 

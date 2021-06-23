@@ -191,18 +191,12 @@ button.close-sidebar {
   padding: 3px 8px;
 }
 
-
-
-
-
-
-
-
-
 span > h1 {
   margin-left: 100px;
   font-size: 25px;
 }
+
+/* Images */
 
 img {
   border-radius: 3px;
@@ -232,7 +226,7 @@ img.large {
   width: 100%;
 }
 
-
+/* Card */
 .card-box {
   width: 238px;
   height: 390px;
@@ -277,12 +271,6 @@ img.large {
   margin-left: 5px;
   font-size: 18px;
 }
-
-
-
-
-
-
 
 /* Alert */
 .loading {
@@ -440,10 +428,7 @@ img.large {
   display: flex;
 }
 
-
-
 /*  Video  */
-
 video {
   object-fit: cover;
   width: 100%;
@@ -481,14 +466,3 @@ video {
 }
 
 
-/*  Banner */
-
-#slider {
-  box-shadow: 2px 2px 5px rgba(47,47,47,0.40);
-  border: 1px solid rgb(226, 224, 224);
-  width: 180vh;
-  height: 20vh;
-  display: flex;
-  margin-bottom: 20px;
-  justify-content: center;
-}

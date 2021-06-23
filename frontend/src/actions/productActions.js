@@ -29,7 +29,7 @@ export const listProducts = ({
   min = 0,
   max = 0,
   rating = 0,
-}) => async (dispatch) => { //As chaves do "{name=''}" conflita com a página de produtos
+}) => async (dispatch) => {
   dispatch({
     type: PRODUCT_LIST_REQUEST
   });
@@ -121,7 +121,7 @@ export const deleteProduct = (productId) => async(dispatch, getState) => {
     const { data } = await Axios.delete(`/api/products/${productId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
-    dispatch({ type: PRODUCT_DELETE_SUCCESS, payload: data }) //Confirmar se este data entra aqui mesmo
+    dispatch({ type: PRODUCT_DELETE_SUCCESS, payload: data })
   } catch (error) {
     const message = 
       error.response && error.response.data.message
