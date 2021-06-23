@@ -2,10 +2,10 @@
 ![aquaplant](/template/images/amazona.jpg)
 
 ## Índice
-- 🔖 [Sobre](#-sobre)
-- 🚀 [Demo Website](#-demo-website)
-- 🧰 [Stacks e Recursos](#-stacks-e-recursos)
-- 📦 [Para rodar local](#-rodar-local)
+- [Sobre](#-sobre)
+- [Demo Website](#-demo-website)
+- [Stacks e Recursos](#-stacks-e-recursos)
+- [Para rodar local](#-rodar-local)
 
 
 ## 🔖 Sobre
