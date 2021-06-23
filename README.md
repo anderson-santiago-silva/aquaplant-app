@@ -2,8 +2,8 @@
 Aquaplant Ecommerce Website
 </h1>
 
-<h1 align="center" width="500px">
-  <img  src="./template/images/preview.gif">
+<h1 align="center">
+  <img  src="./template/images/preview.gif" width="100%" height="100%">
 </h1>
 
 ## Índice
