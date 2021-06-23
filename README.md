@@ -1,7 +1,7 @@
 # Aquaplant Ecommerce Website
 ![aquaplant](/template/images/amazona.jpg)
 
-## Indice
+## Índice
 - 🔖 [Sobre](#-Sobre)
 - 🧰 [Recursos](#-recursos)
 - 📝 [Linguagens](#-linguagens)
@@ -9,12 +9,12 @@
 
 
 ## 🔖Sobre
-### Um e-commerce de aquarismo para quem curte a arte do aquascaping.
+### 🐠 🐟🐡Um e-commerce de aquarismo para quem curte a arte do aquascaping.
 Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar representações naturais da própria natureza em aquários. Existem diversas técnicas mas basicamente podem ser utilizadas plantas aquáticas, peixes, crustáceos entre outras coisas.
 
 ## 🚀Demo Website
 
- 👉 Heroku : [https://aquaplant-app.herokuapp.com/](https://aquaplant-app.herokuapp.com/)
+ - 👉 Heroku : [https://aquaplant-app.herokuapp.com/](https://aquaplant-app.herokuapp.com/)
 
 
 ## 🧰 Stacks e Recursos
@@ -30,7 +30,7 @@ Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar represe
 
 ## 📦 Para rodar local
 
-### 1. Clone repo
+### 1. Clone o repositório
 
 ```
 $ git clone git@github.com:basir/amazona.git
@@ -40,25 +40,25 @@ $ cd amazona
 ### 2. Setup MongoDB
 
 - Local MongoDB
-  - Install it from [here](https://www.mongodb.com/try/download/community)
-  - Create .env file in root folder
+  - Instale a partir daqui [here](https://www.mongodb.com/try/download/community)
+  - Crie o arquivo .env na pasta raiz
   - Set MONGODB_URL=mongodb://localhost/amazona  
 - Atlas Cloud MongoDB
-  - Create database at [https://cloud.mongodb.com](https://cloud.mongodb.com)
-  - Create .env file in root folder
+  - Crie um database em [https://cloud.mongodb.com](https://cloud.mongodb.com)
+  - Crie o arquivo .env na pasta raiz
   - Set MONGODB_URL=mongodb+srv://your-db-connection
 
-### 3. Run Backend
+### 3. Execute Backend
 
 ```
 $ npm install
 $ npm start
 ```
 
-### 4. Run Frontend
+### 4. Execute Frontend
 
 ```
-# open new terminal
+# abra um novo terminal
 $ cd frontend
 $ npm install
 $ npm start
