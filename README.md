@@ -9,7 +9,7 @@
 
 
 ## 🔖Sobre
-### 🐠 🐟🐡Um e-commerce de aquarismo para quem curte a arte do aquascaping.
+### 🐠 Um e-commerce de aquarismo para quem curte a arte do aquascaping.
 Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar representações naturais da própria natureza em aquários. Existem diversas técnicas mas basicamente podem ser utilizadas plantas aquáticas, peixes, crustáceos entre outras coisas.
 
 ## 🚀Demo Website
@@ -33,8 +33,8 @@ Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar represe
 ### 1. Clone o repositório
 
 ```
-$ git clone git@github.com:basir/amazona.git
-$ cd amazona
+$ git clone https://github.com/anderson-santiago-silva/aquaplant-app.git
+$ cd aquaplant
 ```
 
 ### 2. Setup MongoDB
