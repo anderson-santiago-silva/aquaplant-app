@@ -31,7 +31,6 @@ Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar represe
 - MongoDB: Mongoose, Aggregation
 - Development: ESLint, Babel, Git, Github,
 - Deployment: Heroku
-- Watch React & Node Tutorial
 
 ## 📦 Rodar local
 
