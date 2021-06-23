@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1>
 Aquaplant Ecommerce Website
 </h1>
 
@@ -80,5 +80,8 @@ $ npm start
 
 - Execute http://localhost:3000/signin
 - Entre com o email admin e senha e clique signin
+
+
+
 
 #### Desenvolvido por Anderson Santiago 💪
