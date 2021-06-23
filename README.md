@@ -1,13 +1,20 @@
 # Aquaplant Ecommerce Website
 ![aquaplant](/template/images/amazona.jpg)
 
+## Indice
+- 🔖 [Sobre](#-Sobre)
+- 🧰 [Recursos](#-recursos)
+- 📝 [Linguagens](#-linguagens)
+- 📦 [Para rodar local](#-para-rodar-local)
 
-# 🔖Um e-commerce de aquarismo para quem curte a arte do aquascaping.
+
+## 🔖Sobre
+### Um e-commerce de aquarismo para quem curte a arte do aquascaping.
 Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar representações naturais da própria natureza em aquários. Existem diversas técnicas mas basicamente podem ser utilizadas plantas aquáticas, peixes, crustáceos entre outras coisas.
 
-## Demo Website
+## 🚀Demo Website
 
-## 🚀 Heroku : [https://aquaplant-app.herokuapp.com/](https://aquaplant-app.herokuapp.com/)
+ 👉 Heroku : [https://aquaplant-app.herokuapp.com/](https://aquaplant-app.herokuapp.com/)
 
 
 ## 🧰 Stacks e Recursos
