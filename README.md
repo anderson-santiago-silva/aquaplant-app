@@ -1,5 +1,6 @@
 # Aquaplant Ecommerce Website
-![aquaplant](/template/images/amazona.jpg)
+![amazona](/template/images/preview.gif)
+
 
 ## Índice
 - [Sobre](#-sobre)
@@ -8,7 +9,7 @@
 - [Para rodar local](#-rodar-local)
 
 
-## 🔖 Sobre
+## 📖 Sobre
 ### 🐠 Um e-commerce de aquarismo para quem curte a arte do aquascaping.
 Aquascaping ou aquapaisagismo é a arte de utilizar elementos para criar representações naturais da própria natureza em aquários. Existem diversas técnicas mas basicamente podem ser utilizadas plantas aquáticas, peixes, crustáceos entre outras coisas.
 
@@ -75,3 +76,5 @@ $ npm start
 
 - Execute http://localhost:3000/signin
 - Entre com o email admin e senha e clique signin
+
+#### Desenvolvido por Anderson Santiago 💪
