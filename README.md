@@ -1,6 +1,10 @@
-# Aquaplant Ecommerce Website
-![amazona](/template/images/preview.gif)
+<h1 align="center">
+Aquaplant Ecommerce Website
+</h1>
 
+<h1 align="center" width="500px">
+  <img  src="./template/images/preview.gif">
+</h1>
 
 ## Índice
 - [Sobre](#-sobre)
