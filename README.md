@@ -46,7 +46,7 @@ $ cd aquaplant
 - Local MongoDB
   - Instale a partir daqui [here](https://www.mongodb.com/try/download/community)
   - Crie o arquivo .env na pasta raiz
-  - Set MONGODB_URL=mongodb://localhost/amazona  
+  - Set MONGODB_URL=mongodb://localhost/aquaplant  
 - Atlas Cloud MongoDB
   - Crie um database em [https://cloud.mongodb.com](https://cloud.mongodb.com)
   - Crie o arquivo .env na pasta raiz
